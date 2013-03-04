@@ -1,6 +1,10 @@
 source "https://rubygems.org"
 
-gem "sass"
 gem "guard"
 gem "guard-sass"
 gem "rb-fsevent"
+
+gem "sass"
+gem "bourbon"
+gem "neat"
+
