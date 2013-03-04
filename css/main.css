@@ -96,11 +96,18 @@ body {
       margin-left: auto;
       margin-right: auto; }
   body > footer {
-    background-color: #6a1f01;
-    color: #fff4f0;
+    border: 1px solid #feb69a;
+    background-color: #fedbcd;
     width: 5in;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-bottom: 1em; }
+    body > footer div {
+      margin-left: 1em; }
+
+header a {
+  text-decoration: none;
+  color: #320f01; }
 
 footer {
   font-size: 0.61805em; }
@@ -114,6 +121,9 @@ footer {
       content: " ·"; }
     footer li div {
       display: inline-block; }
+
+code {
+  font-family: "Ubuntu Mono", monospace; }
 
 /* ==========================================================================
    Helper classes
