@@ -109,6 +109,9 @@ header a {
   text-decoration: none;
   color: #320f01; }
 
+section p:first-child {
+  font-size: larger; }
+
 footer {
   font-size: 0.61805em; }
   footer ul {
