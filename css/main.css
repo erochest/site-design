@@ -73,16 +73,12 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
+/* The block of my styles. */
 /* Color scheme */
-/* Add styles here. */
 body {
   font-family: "Inder", sans-serif;
   background-color: #fff4f0;
   color: #320f01; }
-  body > div {
-    width: 5in;
-    margin-left: auto;
-    margin-right: auto; }
   body > header {
     width: 100%;
     background-color: #fffbfa;
@@ -90,18 +86,16 @@ body {
     border: 1px solid #6a1f01;
     box-shadow: 0 0 2px 2px rgba(106, 31, 1, 0.3); }
     body > header * {
-      width: 5in;
+      margin-left: 1px;
+      margin-right: 1px;
       margin-top: 0;
-      padding-top: 0.75em;
-      margin-left: auto;
-      margin-right: auto; }
+      padding-top: 0.75em; }
+  body > div {
+    margin-left: 1px;
+    margin-right: 1px; }
   body > footer {
     border: 1px solid #feb69a;
-    background-color: #fedbcd;
-    width: 5in;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em; }
+    background-color: #fedbcd; }
     body > footer div {
       margin-left: 1em; }
 
@@ -119,9 +113,10 @@ footer {
     padding-left: 0; }
   footer li {
     display: inline;
-    vertical-align: top; }
-    footer li:after {
-      content: " ·"; }
+    vertical-align: top;
+    padding-right: 0.5em; }
+    footer li + li:before {
+      content: "· "; }
     footer li div {
       display: inline-block; }
 
@@ -220,7 +215,19 @@ code {
    Modify as content requires.
    ========================================================================== */
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
+  body > header * {
+    width: 5in;
+    margin-left: auto;
+    margin-right: auto; }
+  body > div {
+    width: 5in;
+    margin-left: auto;
+    margin-right: auto; }
+  body > footer {
+    width: 5in;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em; } }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
