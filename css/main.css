@@ -75,53 +75,110 @@ textarea {
 
 /* The block of my styles. */
 /* Color scheme */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   font-family: "Inder", sans-serif;
-  background-color: #fff4f0;
-  color: #320f01; }
-  body > header {
-    width: 100%;
-    background-color: #fffbfa;
-    height: 5.23585em;
-    border: 1px solid #6a1f01;
-    box-shadow: 0 0 2px 2px rgba(106, 31, 1, 0.3); }
-    body > header * {
-      margin-left: 1px;
-      margin-right: 1px;
-      margin-top: 0;
-      padding-top: 0.75em; }
-  body > div {
+  background-color: #e8e5e3;
+  color: #1c1917; }
+
+#container a {
+  color: #a3968f; }
+#container h1 a {
+  color: #1c1917; }
+#container > header {
+  width: 100%;
+  background-color: #d1cac7;
+  height: 5.23585em;
+  border: 1px solid #a3968f;
+  box-shadow: 0 0 2px 2px rgba(209, 202, 199, 0.3); }
+  #container > header * {
     margin-left: 1px;
-    margin-right: 1px; }
-  body > footer {
-    border: 1px solid #feb69a;
-    background-color: #fedbcd; }
-    body > footer div {
-      margin-left: 1em; }
+    margin-right: 1px;
+    margin-top: 0;
+    padding-top: 0.75em; }
+#container > div {
+  margin-left: 1px;
+  margin-right: 1px; }
+#container > footer {
+  background: #e8e5e3;
+  border: 1px solid #a3968f; }
+  #container > footer a {
+    color: #1c1917; }
+  #container > footer > div {
+    margin-left: 1em; }
+  #container > footer .column {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-right: 0; }
+    #container > footer .column:last-child {
+      margin-right: 0; }
 
 header a {
   text-decoration: none;
-  color: #320f01; }
+  color: #1c1917; }
 
-section p:first-child {
+h1 a {
+  text-decoration: none;
+  color: #1c1917; }
+
+article h1, section h1 {
+  font-size: 1.4em;
+  font-weight: bold; }
+  article h1:first-child, section h1:first-child {
+    margin-top: 0;
+    margin-bottom: 0.1em; }
+article p:first-child, section p:first-child {
   font-size: larger; }
+article footer ul li, section footer ul li {
+  display: inline;
+  padding-right: 0.5em; }
+  article footer ul li + li:before, section footer ul li + li:before {
+    content: "· "; }
 
 footer {
   font-size: 0.61805em; }
+  footer h1 {
+    font-size: 1.618em;
+    margin-bottom: 0; }
   footer ul {
     list-style-type: none;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-top: 0; }
   footer li {
-    display: inline;
-    vertical-align: top;
-    padding-right: 0.5em; }
-    footer li + li:before {
-      content: "· "; }
+    vertical-align: top; }
     footer li div {
       display: inline-block; }
+  footer .contact li {
+    display: inline-block;
+    padding-right: 1em; }
+    footer .contact li a {
+      text-decoration: none; }
 
 code {
   font-family: "Ubuntu Mono", monospace; }
+
+.index ul {
+  list-style: none;
+  padding-left: 0; }
+.index nav {
+  margin: 1em 0;
+  text-align: right; }
+
+.profile {
+  *zoom: 1; }
+  .profile img.avatar {
+    float: right; }
+  .profile:before, .profile:after {
+    content: " ";
+    display: table; }
+  .profile:after {
+    clear: both; }
 
 /* ==========================================================================
    Helper classes
@@ -209,25 +266,34 @@ code {
 .clearfix {
   *zoom: 1; }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  body > header * {
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@media screen and (min-width: 640px) {
+  #container > header * {
     width: 5in;
     margin-left: auto;
     margin-right: auto; }
-  body > div {
+  #container > div {
     width: 5in;
     margin-left: auto;
     margin-right: auto; }
-  body > footer {
-    width: 5in;
+  #container > footer > div {
+    width: 640px;
     margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em; } }
+    margin-right: auto; }
+    #container > footer > div .column {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      #container > footer > div .column:last-child {
+        margin-right: 0; } }
+@media screen and (min-width: 960px) {
+  #container > footer > div {
+    width: 960px; } }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
